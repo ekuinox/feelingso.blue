@@ -26,8 +26,8 @@ export default class IndexLayout extends React.Component<Props, State> {
 				<Helmet
 					title={this.props.data.site.siteMetadata.title}
 					meta={[
-						{ name: 'description', content: 'Sample' },
-						{ name: 'keywords', content: 'sample, something' },
+						{ name: 'description', content: 'れもくすサイト' },
+						{ name: 'keywords', content: 'lm0x, lm9, ekuinox, feelingso.blue' },
 					]}
 				/>
 				<Header siteTitle={this.props.data.site.siteMetadata.title} />
