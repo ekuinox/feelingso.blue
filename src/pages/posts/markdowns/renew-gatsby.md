@@ -1,14 +1,14 @@
 ---
 path: "/posts/2018/07/01/renew-gatsby"
 date: "2018-07-01T13:26:00Z"
-title: "Gatsby.jsをやってみている"
+title: "GatsbyJSをやってみている"
 tags: ['gatsby']
-excerpt: "Gatsby.jsをやってみている"
+excerpt: "GatsbyJSをやってみている"
 ---
 
 ## やっている
 
-Gatsby.jsというものを知ったので[blog.feelingso.blue](https://blog.feelingso.blue)をもう[feelingso.blue](https://feelingso.blue)と統合して書き直しちゃおうとしている．2つ分けていても特に配置できるコンテンツもないので．
+GatsbyJSというものを知ったので[blog.feelingso.blue](https://blog.feelingso.blue)をもう[feelingso.blue](https://feelingso.blue)と統合して書き直しちゃおうとしている．2つ分けていても特に配置できるコンテンツもないので．
 いきなり触ってしまったので，Reactってなんやねんってなっています．名前しか聞いたことなかったし，まさかここで当たるとは思わなかった（バカ）
 
 ## 参考にしている
