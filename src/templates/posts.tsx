@@ -13,6 +13,11 @@ export interface Props {
 				excerpt: any
 			}
 		}
+		site: {
+			siteMetadata: {
+				title: string
+			}
+		}
 	}
 	location: any
 	pathContext: any
@@ -26,7 +31,11 @@ export default class PostsTemplate extends React.Component<Props> {
 	render() {
 		return (
 			<div>
-				<Helmet title={`${this.props.data.markdownRemark.frontmatter.title} - My Blog`} />
+				<Helmet
+					title={`${this.props.data.markdownRemark.frontmatter.title} - ${
+						this.props.data.site.siteMetadata.title
+					}`}
+				/>
 				<div>
 					<h1>{this.props.data.markdownRemark.frontmatter.title}</h1>
 					<h3>{this.props.data.markdownRemark.frontmatter.date}</h3>
@@ -48,6 +57,11 @@ export const pageQuery = graphql`
 				path
 				tags
 				excerpt
+			}
+		}
+		site {
+			siteMetadata {
+				title
 			}
 		}
 	}

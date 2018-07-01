@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'FEELING SO BLUE',
+    title: 'れもくすサイト',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
