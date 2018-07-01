@@ -38,7 +38,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     posts.forEach(({node}, index) => {
       if (node.frontmatter.publish)
         createPage({
-         path: node.frontmatter.path,
+          path: node.frontmatter.path,
           component: blogPostTemplate,
         });
     });
