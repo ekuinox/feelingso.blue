@@ -6,6 +6,7 @@ export interface Props {
 }
 
 export default class Header extends React.Component<Props> {
+	readonly listFontFamily = 'Latha'
 	constructor(props: Props) {
 		super(props)
 	}
@@ -22,10 +23,10 @@ export default class Header extends React.Component<Props> {
 					style={{
 						margin: '0 auto',
 						maxWidth: 960,
-						padding: '1.45rem 1.0875rem',
+						padding: '0.45rem 0.0875rem',
 					}}
 				>
-					<h1 style={{ margin: 0 }}>
+					<h1 style={{ margin: 0, float: 'left' }}>
 						<Link
 							to="/"
 							style={{
@@ -36,6 +37,30 @@ export default class Header extends React.Component<Props> {
 							{this.props.siteTitle}
 						</Link>
 					</h1>
+					<ul style={{ display: 'table', listStyle: 'none', paddingLeft: '1.5em' }}>
+						<li style={{ paddingLeft: 0, display: 'table-cell', fontFamily: this.listFontFamily }}>
+							<Link
+								to="/about"
+								style={{
+									color: 'white',
+									textDecoration: 'none',
+								}}
+							>
+								About
+							</Link>
+						</li>
+						<li style={{ paddingLeft: '0.5em', display: 'table-cell', fontFamily: this.listFontFamily }}>
+							<Link
+								to="/posts"
+								style={{
+									color: 'white',
+									textDecoration: 'none',
+								}}
+							>
+								Posts
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</div>
 		)
