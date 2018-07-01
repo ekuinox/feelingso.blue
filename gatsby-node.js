@@ -24,6 +24,7 @@ exports.createPages = ({boundActionCreators, graphql}) => {
             title
             excerpt
             tags
+            publish
           }
         }
       }
@@ -35,10 +36,11 @@ exports.createPages = ({boundActionCreators, graphql}) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(({node}, index) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-      });
+      if (node.frontmatter.publish)
+        createPage({
+         path: node.frontmatter.path,
+          component: blogPostTemplate,
+        });
     });
   });
 };

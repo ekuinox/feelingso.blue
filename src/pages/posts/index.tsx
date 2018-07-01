@@ -14,6 +14,8 @@ interface Props {
 						date: any
 						tags: any
 						excerpt: any
+						publish: boolean
+						secret: boolean
 					}
 				}
 			}[]
@@ -30,15 +32,16 @@ export default class PostsIndexPage extends React.Component<Props> {
 		return (
 			<div>
 				{this.props.data.allMarkdownRemark.edges.map(({ node: post }) => {
-					return (
-						<div key={post.id}>
-							<h2>
-								<Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-							</h2>
-							<p>{post.frontmatter.excerpt}</p>
-							<p>{post.frontmatter.date}</p>
-						</div>
-					)
+					if (post.frontmatter.publish && !post.frontmatter.secret)
+						return (
+							<div key={post.id}>
+								<h2>
+									<Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+								</h2>
+								<p>{post.frontmatter.excerpt}</p>
+								<p>{post.frontmatter.date}</p>
+							</div>
+						)
 				})}
 			</div>
 		)
@@ -59,6 +62,8 @@ export const query = graphql`
 						date(formatString: "MMMM DD, YYYY")
 						tags
 						excerpt
+						publish
+						secret
 					}
 				}
 			}

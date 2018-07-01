@@ -4,6 +4,8 @@ date: "2018-07-01T13:26:00Z"
 title: "GatsbyJSをやってみている"
 tags: ['gatsby']
 excerpt: "GatsbyJSをやってみている"
+publish: true
+secret: false
 ---
 
 ## やっている

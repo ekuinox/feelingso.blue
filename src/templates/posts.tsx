@@ -7,10 +7,12 @@ export interface Props {
 			html: any
 			frontmatter: {
 				title: any
-				date: any
 				path: any
+				date: any
 				tags: any
 				excerpt: any
+				publish: boolean
+				secret: boolean
 			}
 		}
 		site: {
@@ -29,7 +31,7 @@ export default class PostsTemplate extends React.Component<Props> {
 	}
 
 	render() {
-		return (
+		return this.props.data.markdownRemark.frontmatter.publish ? (
 			<div>
 				<Helmet
 					title={`${this.props.data.markdownRemark.frontmatter.title} - ${
@@ -42,6 +44,11 @@ export default class PostsTemplate extends React.Component<Props> {
 					<div dangerouslySetInnerHTML={{ __html: this.props.data.markdownRemark.html }} />
 				</div>
 			</div>
+		) : (
+			<div>
+				<h1>NOT FOUND</h1>
+				<p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+			</div>
 		)
 	}
 }
@@ -53,10 +60,12 @@ export const pageQuery = graphql`
 			html
 			frontmatter {
 				title
-				date(formatString: "MMMM DD, YYYY")
 				path
+				date(formatString: "MMMM DD, YYYY")
 				tags
 				excerpt
+				publish
+				secret
 			}
 		}
 		site {
