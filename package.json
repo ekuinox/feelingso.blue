@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@types/prop-types": "^15.5.3",
+    "@types/react-dom": "^16.0.6",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-remark": "^1.7.44",
     "prettier": "^1.12.0",
