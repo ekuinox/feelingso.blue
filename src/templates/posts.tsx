@@ -32,15 +32,24 @@ export default class PostsTemplate extends React.Component<Props> {
 
 	render() {
 		return this.props.data.markdownRemark.frontmatter.publish ? (
-			<div>
+			<div
+				style={{
+					backgroundColor: '#e7e7e7',
+					padding: '1.0rem 1.0rem 1.0rem 2.0rem',
+					borderRadius: '1rem',
+				}}
+			>
 				<Helmet
 					title={`${this.props.data.markdownRemark.frontmatter.title} - ${
 						this.props.data.site.siteMetadata.title
 					}`}
 				/>
 				<div>
-					<h1>{this.props.data.markdownRemark.frontmatter.title}</h1>
-					<h3>{this.props.data.markdownRemark.frontmatter.date}</h3>
+					<h1 style={{ textAlign: 'center' }}>{this.props.data.markdownRemark.frontmatter.title}</h1>
+					<h3 style={{ textAlign: 'right', fontSize: '80%' }}>
+						{this.props.data.markdownRemark.frontmatter.date}
+					</h3>
+					<hr style={{ margin: '0 0 1 0' }} />
 					<div dangerouslySetInnerHTML={{ __html: this.props.data.markdownRemark.html }} />
 				</div>
 			</div>
