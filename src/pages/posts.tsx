@@ -50,7 +50,7 @@ export default class PostsIndexPage extends React.Component<Props> {
 
 declare function graphql(x: TemplateStringsArray): any
 export const query = graphql`
-	query IndexQuery {
+	query PostsQuery {
 		allMarkdownRemark {
 			totalCount
 			edges {
