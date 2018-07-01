@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
+import Footer from '../components/footer'
 import './index.css'
 
 export interface Props {
@@ -39,6 +40,7 @@ export default class IndexLayout extends React.Component<Props> {
 				>
 					{(this.props.children as any)()}
 				</div>
+				<Footer siteTitle={this.props.data.site.siteMetadata.title} />
 			</div>
 		)
 	}
