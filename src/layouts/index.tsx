@@ -13,11 +13,9 @@ export interface Props {
 	}
 }
 
-export interface State {}
-
-export default class IndexLayout extends React.Component<Props, State> {
-	constructor(props: Props, state: State) {
-		super(props, state)
+export default class IndexLayout extends React.Component<Props> {
+	constructor(props: Props) {
+		super(props)
 	}
 
 	public render() {

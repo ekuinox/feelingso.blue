@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "@types/prop-types": "^15.5.3",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44",
     "prettier": "^1.12.0",
     "prop-types": "^15.6.2",
     "tslint": "^5.10.0",
