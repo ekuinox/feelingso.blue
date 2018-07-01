@@ -48,14 +48,14 @@ export default class IndexPage extends React.Component<Props> {
 			<div style={{ margin: 0 }}>
 				<div
 					style={{
-						padding: '1.0rem 0.0rem 1.0rem 2.0rem',
+						padding: '1.0rem 1.0rem 1.0rem 2.0rem',
 						backgroundColor: '#ffeeff',
 						borderRadius: '0.5rem',
 					}}
 				>
 					<p>れもくすサイトです．</p>
 					<p>
-						<a href="https://twitter.com/ekuinox/">ekuinox</a>によって管理されています．わたしについては<Link to="about">
+						<a href="https://twitter.com/ekuinox/">@ekuinox</a>によって管理されています．私については<Link to="about">
 							こちら
 						</Link>．
 					</p>
@@ -63,7 +63,7 @@ export default class IndexPage extends React.Component<Props> {
 				<div
 					style={{
 						marginTop: '2rem',
-						padding: '1.0rem 0.0rem 1.0rem 2.0rem',
+						padding: '1.0rem 1.0rem 1.0rem 2.0rem',
 						backgroundColor: '#ffeeff',
 						borderRadius: '0.5rem',
 					}}
