@@ -16,6 +16,8 @@ export interface Node {
 
 interface Props {
 	node: Node
+	front?: JSX.Element
+	back?: JSX.Element
 }
 
 export default class PostCard extends React.Component<Props> {
@@ -33,6 +35,7 @@ export default class PostCard extends React.Component<Props> {
 					borderRadius: '0.5rem',
 				}}
 			>
+				{this.props.front}
 				<span
 					style={{
 						fontSize: '75%',
@@ -55,6 +58,7 @@ export default class PostCard extends React.Component<Props> {
 				>
 					{this.props.node.frontmatter.excerpt}
 				</span>
+				{this.props.back}
 			</div>
 		)
 	}

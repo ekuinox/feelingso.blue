@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
+import PostCard from '../components/PostCard'
 
 export interface Node {
 	id: string
@@ -60,38 +61,7 @@ export default class IndexPage extends React.Component<Props> {
 						</Link>．
 					</p>
 				</div>
-				<div
-					style={{
-						marginTop: '2rem',
-						padding: '1.0rem 1.0rem 1.0rem 2.0rem',
-						backgroundColor: '#ffeeff',
-						borderRadius: '0.5rem',
-					}}
-				>
-					<h2>最新の記事</h2>
-					<span
-						style={{
-							fontSize: '75%',
-						}}
-					>
-						{new Date(this.newestPost.frontmatter.date).toLocaleDateString()}
-					</span>
-					<h3>
-						<Link to={this.newestPost.frontmatter.path}>{this.newestPost.frontmatter.title}</Link>
-					</h3>
-					<span
-						style={{
-							fontSize: '80%',
-							color: 'black',
-							backgroundColor: '#808080',
-							padding: '0.4rem 0.4rem 0.4rem 0.4rem',
-							borderRadius: '0.1rem',
-							border: 'dashed 0.04rem',
-						}}
-					>
-						{this.newestPost.frontmatter.excerpt}
-					</span>
-				</div>
+				<PostCard node={this.newestPost} front={<h2 style={{ fontSize: '90%' }}>最新の記事</h2>} />
 			</div>
 		)
 	}
