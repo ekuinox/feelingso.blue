@@ -1,6 +1,5 @@
 import * as React from 'react'
-import TwitterShare from './TwitterShare'
-import Link from 'gatsby-link'
+import { Share as TwitterShare } from 'react-twitter-widgets'
 
 export interface Props {
 	siteTitle: string
@@ -19,7 +18,7 @@ export default class Header extends React.Component<Props> {
 					textAlign: 'right',
 				}}
 			>
-				<TwitterShare text="Tweet" />
+				<TwitterShare url={document.location.toString()} />
 			</div>
 		)
 	}

@@ -17,3 +17,4 @@ GatsbyJSというものを知ったので[blog.feelingso.blue](https://blog.feel
 - [React.js製の静的サイトジェネレーターGatsbyに移行した](https://qiita.com/jaxx2104/items/5f28915355a85d36e38a)
 - [TypeScriptでGatsby.jsチュートリアル](https://qiita.com/suzuki_sh/items/8f4201e7c43c7a0a3eb6)
 - [Gatsbyを使ってみる - Qiita](https://qiita.com/abcb2/items/3731a12866d5c093af48)
+- [ReactでTwitterの共有ボタンを置く](https://qiita.com/h_demon/items/95e638666f6bd479b47b)
