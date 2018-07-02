@@ -6,9 +6,6 @@
 	animation-iteration-count: infinite;
 	animation-direction: normal;
 }
-#not-found-img:hover {
-	width: 20rem;
-}
 
 @keyframes rotation {
 	0% {
