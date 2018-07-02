@@ -1,0 +1,19 @@
+#not-found-img {
+	width: 10rem;
+	height: 10rem;
+	background: #000;
+	animation: rotation 2s ease 0s 1 alternate none running;
+	animation-iteration-count: infinite
+}
+#not-found-img:hover {
+	width: 20rem;
+}
+
+@keyframes rotation {
+	0% {
+		transform: scale(1) rotate(0deg);
+	}
+	100% {
+		transform: scale(1) rotate(720deg);
+	}
+}
