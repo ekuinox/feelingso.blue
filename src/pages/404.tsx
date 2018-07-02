@@ -2,8 +2,6 @@ import * as React from 'react'
 import './404.css'
 
 export default class NotFoundPage extends React.Component {
-	private _w = 100
-	private _h = 100
 	render() {
 		return (
 			<div>

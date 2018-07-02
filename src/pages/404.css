@@ -3,7 +3,8 @@
 	height: 10rem;
 	background: #000;
 	animation: rotation 2s ease 0s 1 alternate none running;
-	animation-iteration-count: infinite
+	animation-iteration-count: infinite;
+	animation-direction: normal;
 }
 #not-found-img:hover {
 	width: 20rem;
@@ -14,6 +15,6 @@
 		transform: scale(1) rotate(0deg);
 	}
 	100% {
-		transform: scale(1) rotate(720deg);
+		transform: scale(1) rotate(1080deg);
 	}
 }
