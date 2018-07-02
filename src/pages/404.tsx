@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default class NotFoundPage extends React.Component<Props> {
-	readonly pageTitle = "404"
+	readonly pageTitle = '404'
 	constructor(props: Props) {
 		super(props)
 	}
