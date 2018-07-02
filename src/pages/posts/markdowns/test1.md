@@ -11,3 +11,10 @@ secret: false
 とくになし
 
 ヤマノススメ サードシーズンみるまでやる
+
+```javascript
+for (let i = 0; i < 5; i++) {
+    console.log("ぽえ～")
+    console.log("フィ～～")
+}
+```

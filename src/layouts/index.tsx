@@ -2,6 +2,7 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import 'prismjs/themes/prism-coy.css'
 import './index.css'
 
 export interface Props {
