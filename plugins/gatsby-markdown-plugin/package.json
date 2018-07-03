@@ -1,0 +1,13 @@
+{
+  "name": "gatsby-markdown-plugin",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "gatsby": "^1.9.273"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ekuinox <depkey@me.com> (https://github.com/lm9)",
+  "license": "ISC"
+}

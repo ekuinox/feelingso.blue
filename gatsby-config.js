@@ -11,7 +11,7 @@ module.exports = {
 			options: {
 				name: `src`,
 				path: `${__dirname}/src`,
-			},
+			}
 		},
 		{
 			resolve: `gatsby-transformer-remark`,
@@ -28,5 +28,13 @@ module.exports = {
 				],
 			},
 		},
+		{
+			resolve: `gatsby-markdown-plugin`,
+			options: {
+				name: `src`,
+				path: `${__dirname}/src`,
+				temlateFile: `src/templates/posts.tsx`
+			},
+		}
 	],
 }
