@@ -7,6 +7,7 @@
 		"@types/react-helmet": "^5.0.6",
 		"gatsby": "^1.9.273",
 		"gatsby-link": "^1.6.45",
+		"gatsby-plugin-mdx": "^1.0.1",
 		"gatsby-plugin-react-helmet": "^2.0.11",
 		"gatsby-plugin-typescript": "^1.4.20",
 		"react-helmet": "^5.2.0",
@@ -24,11 +25,14 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"devDependencies": {
+		"@mdx-js/loader": "^0.13.0-0",
+		"@mdx-js/mdx": "^0.13.0-0",
 		"@types/prop-types": "^15.5.3",
 		"@types/react-dom": "^16.0.6",
 		"gatsby-remark-prismjs": "^2.0.4",
 		"gatsby-source-filesystem": "^1.5.39",
 		"gatsby-transformer-remark": "^1.7.44",
+		"loader-utils": "^1.1.0",
 		"prettier": "^1.13.7",
 		"prismjs": "^1.15.0",
 		"prop-types": "^15.6.2",
