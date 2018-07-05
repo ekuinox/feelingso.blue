@@ -19,7 +19,6 @@ export interface Props {
 export default class IndexLayout extends React.Component<Props> {
 	constructor(props: Props) {
 		super(props)
-		console.log(this.props.pathContext)
 	}
 
 	public render() {
