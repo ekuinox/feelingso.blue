@@ -1,7 +1,8 @@
 const path = require("path")
 
-exports.createPages = ({boundActionCreators, graphql}, {layoutFile}) => {
-	const {createPage} = boundActionCreators;
+exports.createPages = ({boundActionCreators, graphql}, {layoutFile, temlateFile}) => {
+	const {createPage} = boundActionCreators
+	const template = path.resolve(temlateFile)
 	return graphql(`
 	{
 		allMarkdownRemark {
@@ -9,6 +10,7 @@ exports.createPages = ({boundActionCreators, graphql}, {layoutFile}) => {
 				node {
 					fileAbsolutePath
 					frontmatter {
+						mdx
 						title
 						path
 						date(formatString: "MMMM DD, YYYY")
@@ -31,11 +33,21 @@ exports.createPages = ({boundActionCreators, graphql}, {layoutFile}) => {
 		result.data.allMarkdownRemark.edges.forEach(
 			({ node: { fileAbsolutePath, frontmatter } }) => {
 				const path = frontmatter.path;
-				const page = {
-					path: path,
-					component: fileAbsolutePath,
-					layout: layoutFile,
-				}
+				const page = (() => {
+					if (frontmatter.mdx) {
+						return {
+							path: path,
+							component: fileAbsolutePath,
+							layout: layoutFile,
+						}
+					}
+					else {
+						return {
+							path: path,
+							component: template,
+						}
+					}
+				})()
 				createPage(page)
 			}
 		)

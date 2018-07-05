@@ -1,4 +1,5 @@
 ---
+mdx: false
 path: "/posts/2018/07/01/secret"
 date: "2018-07-01T14:52:00Z"
 title: "シークレット用テスト"

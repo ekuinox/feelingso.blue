@@ -34,7 +34,8 @@ module.exports = {
 			options: {
 				name: `src`,
 				path: `${__dirname}/src`,
-				layoutFile: `post`
+				layoutFile: `post`,
+				temlateFile: `src/templates/posts.tsx`
 			},
 		}
 	],

@@ -1,4 +1,5 @@
 ---
+mdx: false
 path: "/posts/2018/07/01/renew-gatsby"
 date: "2018-07-01T13:26:00Z"
 title: "GatsbyJSをやってみている"
