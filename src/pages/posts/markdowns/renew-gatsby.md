@@ -7,6 +7,9 @@ excerpt: "GatsbyJSをやってみている"
 publish: true
 secret: false
 ---
+import Helmet from 'react-helmet'
+
+<Helmet title={`GatsbyJSをやってみている - れもくすさいと`}/>
 
 ## やっている
 

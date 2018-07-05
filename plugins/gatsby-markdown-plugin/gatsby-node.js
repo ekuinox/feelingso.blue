@@ -4,35 +4,47 @@ const path = require("path")
 exports.createPages = ({boundActionCreators, graphql}, {temlateFile}) => {
     const {createPage} = boundActionCreators;
 	const blogPostTemplate = path.resolve(temlateFile);
-	return graphql(`{
-		allMarkdownRemark {
-            edges {
-                node {
-					html
-					id
-					frontmatter {
-						date
-						path
-						title
-						excerpt
-						tags
-						publish
-					}
+	return new Promise((resolve, reject) => {
+		graphql(`
+		  {
+			allMarkdownRemark {
+			  edges {
+				node {
+				  fileAbsolutePath
+				  frontmatter {
+					title
+					path
+					date(formatString: "MMMM DD, YYYY")
+					tags
+					excerpt
+					publish
+					secret
+				  }
 				}
+			  }
+			} 
+		  }
+		`)
+		  .then(result => {
+			if (result.errors) {
+			  return reject(result.errors)
 			}
-		}
-	}`).then(result => {
-		if (result.errors) {
-			return Promise.reject(result.errors);
-		}
-		const posts = result.data.allMarkdownRemark.edges;
-
-		posts.forEach(({node}, index) => {
-			if (node.frontmatter.publish)
+	
+			// Create markdown pages.
+			result.data.allMarkdownRemark.edges.forEach(
+			  ({ node: { fileAbsolutePath, frontmatter } }) => {
 				createPage({
-					path: node.frontmatter.path,
-					component: blogPostTemplate,
-				});
-		});
-	});
+				  path: frontmatter.path,
+				  component: fileAbsolutePath,
+				  layout: "post",
+				  context: {
+					  frontmatter: frontmatter
+				  },
+				  layoutContext: frontmatter
+				})
+			  }
+			)
+		  })
+		  .then(resolve)
+	  })
 }

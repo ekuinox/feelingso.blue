@@ -3,16 +3,17 @@ module.exports = {
 		title: 'れもくすサイト',
 	},
 	plugins: [
-		'gatsby-plugin-react-helmet',
-		'gatsby-plugin-typescript',
-		'gatsby-transformer-remark',
-		 {
-			resolve: `gatsby-source-filesystem`,
+		{
+			resolve: 'gatsby-source-filesystem',
 			options: {
-				name: `src`,
-				path: `${__dirname}/src`,
-			}
+				name: 'pages',
+				path: `${__dirname}/src/pages/`,
+			},
 		},
+		'gatsby-plugin-typescript',
+		'gatsby-plugin-react-helmet',
+		`gatsby-plugin-mdx`,
+		'gatsby-transformer-remark',
 		{
 			resolve: `gatsby-transformer-remark`,
 			options: {
@@ -33,7 +34,7 @@ module.exports = {
 			options: {
 				name: `src`,
 				path: `${__dirname}/src`,
-				temlateFile: `src/templates/posts.tsx`
+				temlateFile: `./src/layouts/posts.tsx`
 			},
 		}
 	],

@@ -5,21 +5,10 @@ import Footer from '../components/footer'
 import 'prismjs/themes/prism-coy.css'
 import './index.css'
 
-export interface Props {
-	data: {
-		site: {
-			siteMetadata: {
-				title: string
-			}
-		}
-	}
-	pathContext: any
-}
-
-export default class IndexLayout extends React.Component<Props> {
-	constructor(props: Props) {
+export default class PLayout extends React.Component<any> {
+	constructor(props: any) {
 		super(props)
-		console.log(this.props.pathContext)
+		console.log(this.props)
 	}
 
 	public render() {
@@ -41,21 +30,22 @@ export default class IndexLayout extends React.Component<Props> {
 						paddingTop: 0,
 					}}
 				>
-					{(this.props.children as any)()}
+					<div
+						style={{
+							backgroundColor: '#e7e7e7',
+							padding: '1.0rem 1.0rem 1.0rem 2.0rem',
+							borderRadius: '1rem',
+						}}
+					>
+						<Helmet title={`${this.props.data.site.siteMetadata.title}`} />
+						<div>
+							<h1 style={{ textAlign: 'center' }}>{this.props.data.site.siteMetadata.title}</h1>
+							{(this.props.children as any)()}
+						</div>
+					</div>
 				</div>
 				<Footer siteTitle={this.props.data.site.siteMetadata.title} />
 			</div>
 		)
 	}
 }
-
-declare function graphql(x: TemplateStringsArray): any
-export const query = graphql`
-	query SiteTitleQuery {
-		site {
-			siteMetadata {
-				title
-			}
-		}
-	}
-`
