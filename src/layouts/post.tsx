@@ -75,7 +75,6 @@ export default class PostLayout extends React.Component<Props> {
 							borderRadius: '1rem',
 						}}
 					>
-						<Helmet title={this.node.frontmatter.title} />
 						<div>
 							<h1 style={{ textAlign: 'center' }}>{this.node.frontmatter.title}</h1>
 							{(this.props.children as any)()}
