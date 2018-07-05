@@ -6,7 +6,7 @@
 	"dependencies": {
 		"@types/react-helmet": "^5.0.6",
 		"gatsby-link": "^1.6.45",
-		"gatsby-plugin-mdx": "github:lm9/gatsby-plugin-mdx#master",
+		"gatsby-plugin-mdx": "github:lm9/gatsby-plugin-mdx#968d514697834c4413359e4be0e4c3b88dae50fd",
 		"gatsby-plugin-react-helmet": "^2.0.11",
 		"gatsby-plugin-typescript": "^1.4.20",
 		"react-helmet": "^5.2.0",
