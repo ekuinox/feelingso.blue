@@ -8,8 +8,6 @@ excerpt: "GatsbyJSをやってみている"
 publish: true
 secret: false
 ---
-import Helmet from 'react-helmet'
-
 ## やっている
 
 GatsbyJSというものを知ったので[blog.feelingso.blue](https://blog.feelingso.blue)をもう[feelingso.blue](https://feelingso.blue)と統合して書き直しちゃおうとしている．2つ分けていても特に配置できるコンテンツもないので．
