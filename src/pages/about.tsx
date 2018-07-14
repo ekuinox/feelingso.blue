@@ -24,7 +24,7 @@ export default class IndexPage extends React.Component {
 					<li>
 						<a href="https://keybase.io/lm0x">Keybase</a>
 					</li>
-					<li>Discord: lm0x#5856</li>
+					<li>Discord: ekuinox#5856</li>
 					<li>
 						<a href="mailto:eku@lmx.pw">eku@lmx.pw</a>
 					</li>
