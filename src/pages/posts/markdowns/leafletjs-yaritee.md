@@ -1,6 +1,6 @@
 ---
 mdx: false
-path: "/posts/2018/07/17/leaflet"
+path: "/posts/2018/08/08/leaflet"
 date: "2018-08-08T01:23:26.544Z"
 title: "【とりあえず】Leaflet + React + TypeScriptしたい【なんとかなりました】"
 tags: []
