@@ -2,7 +2,7 @@
 mdx: false
 path: "/posts/2018/07/17/leaflet"
 date: "2018-08-08T01:23:26.544Z"
-title: "Leaflet + React + Typescriptしたい"
+title: "【わからん】Leaflet + React + TypeScriptしたい【助けて】"
 tags: []
 excerpt: "いやこれが全然できないんだよな"
 publish: true
