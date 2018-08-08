@@ -9,7 +9,7 @@ publish: true
 secret: false
 ---
 
-[前回](//posts/2018/08/08/leaflet)
+[前回](/posts/2018/08/08/leaflet)
 
 続いたので．
 
